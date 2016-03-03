@@ -1,7 +1,7 @@
 ---
 layout: post
-title: "Wen_Xi_He_Shang"
+title: "My First Blog"
 date: 2016-03-03
 ---
 
-Well. Finally got around to putting this old website together. Neat thing about it - powered by [Jekyll](http://jekyllrb.com) and I can use Markdown to author my posts. It actually is a lot easier than I thought it was going to be.
+鼓捣了一晚上，照着教程一步步来都能搞错好多东西，也是醉了！
