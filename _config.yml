@@ -1,3 +1,11 @@
 name: Wen_Xi_He_Shang
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
+
+defaults:
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
