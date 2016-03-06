@@ -13,6 +13,10 @@ html, body {
   margin: 0 auto -4em;
 }
 
-.footer, .clear {
+.footer {
   height: 4em;
+}
+
+.push{
+	height: 4em;
 }
