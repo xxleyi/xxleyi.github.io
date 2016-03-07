@@ -13,7 +13,8 @@ nav ul, footer ul {
 
 footer ul {
   position:absolute;
-  left:50%;
+  left:19.1%;
+  width:100%;
   bottom:50%;
 }
 nav ul li, footer ul li {
