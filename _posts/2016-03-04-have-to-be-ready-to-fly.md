@@ -53,3 +53,11 @@ if __name__ == "__main__":
     cli.cmdloop()
 
 {% endhighlight %}
+
+'''python
+if __name__ == "__main__":
+    cli = CLI()
+    for word in cli.words:
+        print word
+    cli.cmdloop()
+'''
