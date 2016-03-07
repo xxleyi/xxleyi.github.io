@@ -1,5 +1,12 @@
-name: Wen_Xi_He_Shang
+name: blogwebsite
+
+highlighter: pygments
 markdown: kramdown
+kramdown:
+  input:           GFM
+  auto_ids:        true
+  auto_id_prefix:  'id-'
+
 permalink: /blog/:year/:month/:day/:title
 
 defaults:
