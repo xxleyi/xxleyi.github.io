@@ -2,13 +2,19 @@ body {
     margin: 60px auto;
     width: 61.8%;
 	  height: 100%;
-    background-color: #c2c2d6;
+    background-color: #e0e0eb;
 }
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
     list-style: none;
     font-weight: bold;
+}
+
+footer ul {
+  position:absolute;
+  left:50%;
+  bottom:50%;
 }
 nav ul li, footer ul li {
     display: inline;
@@ -35,10 +41,11 @@ p {
 footer {
     border-top: 1px solid #d5d5d5;
     font-size: .8em;
-    width: 61.8%;
+    width: 100%;
     position:absolute;
-    left: auto;
+    left: 0;
     bottom: 0;
+    background-color: #d0d0e1;
 }
 
 ul.posts {
