@@ -1,6 +1,6 @@
 ---
-title: "缺省设置"
-date: 2016-03-06
+title: "kramdown语法测试"
+date: 2016-03-07
 ---
 
 ### Get ready
