@@ -1,6 +1,6 @@
 name: blogwebsite
 
-highlighter: pygments
+highlighter: rouge
 markdown: kramdown
 kramdown:
   input:           GFM
