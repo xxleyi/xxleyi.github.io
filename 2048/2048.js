@@ -2,6 +2,7 @@ var board = new Array();
 var moved = false;
 var lost_game = false;
 var score = 0;
+var direction = -1;
 $(document).ready(function(){
   newgame();
 });
@@ -93,43 +94,40 @@ document.addEventListener('touchend',function(event){
 	var deltax = endx - startx;
 	var deltay = endy - starty;
 
-	if(Math.abs(deltax) <0.2*documentWidth&& Math.abs(deltay)<0.2*documentWidth){
+	if(Math.abs(deltax) <0.2*documentWidth&& Math.abs(deltay)<0.1*documentWidth){
 		return;
 	}
 
 	if(Math.abs(deltax) >= Math.abs(deltay)){
-		if(deltax > 0){
-			//向右
-			if(moveRight()){
-					setTimeout("generateOneNumber()",210);
-					setTimeout("isGameover()",300);
-					setTimeout("isWin()",300);
-				}
+		if(deltax<0){
+      //left
+      direction = 0;
 		}else{
-			//向左
-			if(moveLeft()){
-					setTimeout("generateOneNumber()",210);
-					setTimeout("isGameover()",300);
-					setTimeout("isWin()",300);
-				}
-		}
-	}else{
-		if(deltay > 0){
-			//向下
-			if(moveDown()){
-					setTimeout("generateOneNumber()",210);
-					setTimeout("isGameover()",300);
-					setTimeout("isWin()",300);
-				}
-		}else{
-			//向上
-			if(moveUp()){
-					setTimeout("generateOneNumber()",210);
-					setTimeout("isGameover()",300);
-					setTimeout("isWin()",300);
-				}
-		}
-	}
+      //right
+      direction = 1;
+    }
+  }else{
+    if(deltay<0){
+      //up
+      direction = 2;
+    }else{
+      //down
+      direction = 3;
+    }
+  }
+
+  moveMobile();
+  if(moved){
+    generateOneNumber();
+  }else{
+    getValidCell();
+    if(lost_game){
+      console.log('You are lost!')
+    }
+  }
+  moved = false;
+  updateBoardView();
+
 });
 
 function move(){
@@ -155,6 +153,29 @@ function move(){
   }
 }
 
+function moveMobile(){
+  rotateMobile();
+  remove();
+  for(var i=0;i<4;i++){
+    for(var j=0;j<3;j++){
+        if(board[i][j]==board[i][j+1]){
+          board[i][j] *= 2;
+          score += board[i][j];
+          board[i][j+1] = 0;
+        }
+    }
+  }
+  remove();
+  if(direction==3){
+    for(var i=0;i<4;i++){
+      board[i].reverse();
+    }
+    transpose();
+  }else{
+    rotateMobile();
+  }
+}
+
 function remove() {
   for(var i=0;i<4;i++){
     for(var j=0;j<4;j++){
@@ -170,6 +191,7 @@ function remove() {
     }
   }
 }
+
 
 function rotate(){
   switch (event.keyCode) {
@@ -187,6 +209,32 @@ function rotate(){
       }
       break;
     case 40://down
+    event.preventDefault();
+      transpose();
+      for(var i=0;i<4;i++){
+        board[i].reverse();
+      }
+    break;
+
+  }
+}
+
+function rotateMobile(){
+  switch (direction) {
+    case 0://left
+    event.preventDefault();
+      break;
+    case 2://up
+    event.preventDefault();
+      transpose();
+      break;
+    case 1://right
+    event.preventDefault();
+      for(var i=0;i<4;i++){
+        board[i].reverse();
+      }
+      break;
+    case 3://down
     event.preventDefault();
       transpose();
       for(var i=0;i<4;i++){

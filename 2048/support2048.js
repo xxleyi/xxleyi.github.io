@@ -1,8 +1,10 @@
 /*
 name:support2048
-author:cqc
+原作者:cqc
+改编：刘西民
 */
-
+documentWidth = window.screen.width;
+documentHeight = window.screen.height;
 
 function getNumberCellBgColor(number){
 
