@@ -3,19 +3,32 @@ var moved = false;
 var lost_game = false;
 var score = 0;
 var direction = -1;
+var num_2048 = 0;
 $(document).ready(function(){
   newgame();
 });
 
 function newgame(){
+  num_2048 = 0;
   init();
   generateOneNumber();
   generateOneNumber();
   updateBoardView();
 }
 
+function again(){
+  newgame();
+  $(".dialog-fail").css("display","none");
+}
+
+function conti() {
+  $(".dialog-success").css("display","none");
+}
+
 function init(){
   score = 0;
+  $(".dialog-fail").css("display","none")
+  $(".dialog-success").css("display","none")
   for(var i=0;i<4;i++){
     for(var j=0;j<4;j++){
       var gridCell = $("#grid-cell-"+i+"-"+j);
@@ -66,11 +79,13 @@ function generateOneNumber(){
 
 $(document).keydown(function (event) {
   move();
+  find2048();
   if(moved){
     generateOneNumber();
   }else{
     getValidCell();
     if(lost_game){
+      $(".dialog-fail").css("display","block")
       console.log('You are lost!')
     }
   }
@@ -117,11 +132,13 @@ document.addEventListener('touchend',function(event){
   }
 
   moveMobile();
+  find2048();
   if(moved){
     generateOneNumber();
   }else{
     getValidCell();
     if(lost_game){
+      $(".dialog-fail").css("display","block")
       console.log('You are lost!')
     }
   }

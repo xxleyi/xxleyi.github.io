@@ -89,7 +89,6 @@ function getValidCell() {
 			}
 		}
 	}
-	// console.log(valid_list)
 	if(valid_list.length==0){
 		lost_game = true;
 	}
@@ -109,4 +108,43 @@ function transpose(){
 				board[i][j] = temp_transpose[i][j];
 	      }
 	}
+}
+
+function find2048() {
+	for(var i=0;i<4;i++){
+		for(var j=0;j<4;j++){
+			if(board[i][j]>0){
+				if(num_2048==0){
+					if(board[i][j]%2048==0){
+						num_2048 += 1;
+						$(".dialog-success").css("display","block");
+						$("#conti").text("Good! Try "+4096);
+					}
+				}else if(num_2048==1){
+					if(board[i][j]%4096==0){
+						num_2048 += 1;
+						$(".dialog-success").css("display","block");
+						$("#conti").text("Better! Try "+8192);
+					}else if(num_2048==2){
+						if(board[i][j]%8192==0){
+							num_2048 += 1;
+							$(".dialog-success").css("display","block");
+							$("#conti").text("You are the Best, Try "+16384)
+						}else if (num_2048==3){
+							if(board[i][j]%16384==0){
+								num_2048 += 1;
+								$(".dialog-success").css("display","block");
+								$("#conti").text("You Win!")
+							}
+						}
+					}
+				}
+				// else{
+				// 	return false;
+				// }
+			}
+
+		}
+	}
+	console.log("num_2048:"+num_2048)
 }
