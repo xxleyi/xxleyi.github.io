@@ -24,7 +24,7 @@ function init(){
   for(var i=0;i<4;i++){
     board[i] = new Array();
     for(var j=0;j<4;j++){
-      board[i][j] = 20480;
+      board[i][j] = 0;
     }
   }
   var scoreCell = $("#score");
@@ -94,7 +94,7 @@ document.addEventListener('touchend',function(event){
 	var deltax = endx - startx;
 	var deltay = endy - starty;
 
-	if(Math.abs(deltax) <0.1*documentWidth&& Math.abs(deltay)<0.06*documentWidth){
+	if(Math.abs(deltax) <0.03*documentWidth&& Math.abs(deltay)<0.01*documentWidth){
 		return;
 	}
 
