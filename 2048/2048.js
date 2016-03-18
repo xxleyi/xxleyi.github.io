@@ -85,8 +85,12 @@ $(document).keydown(function (event) {
   }else{
     getValidCell();
     if(lost_game){
+      findMerge();
+      transpose();
+      findMerge();
+      if(lost_game){
       $(".dialog-fail").css("display","block")
-      console.log('You are lost!')
+      }
     }
   }
   moved = false;
@@ -138,8 +142,12 @@ document.addEventListener('touchend',function(event){
   }else{
     getValidCell();
     if(lost_game){
+      findMerge();
+      transpose();
+      findMerge();
+      if(lost_game){
       $(".dialog-fail").css("display","block")
-      console.log('You are lost!')
+      }
     }
   }
   moved = false;
