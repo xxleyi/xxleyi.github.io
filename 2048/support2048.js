@@ -66,9 +66,9 @@ function getNumberCellFontSize(number){
 	}else if(number <= 512){
 		return "2.5em";
 	}else if(number <=8192){
-		return "1.5em";
+		return "2em";
 	}else{
-		return "1em";
+		return "2em";
 	}
 return "1em";
 }
