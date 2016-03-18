@@ -86,8 +86,6 @@ $(document).keydown(function (event) {
     getValidCell();
     if(lost_game){
       findMerge();
-      transpose();
-      findMerge();
       if(lost_game){
       $(".dialog-fail").css("display","block")
       }
@@ -142,8 +140,6 @@ document.addEventListener('touchend',function(event){
   }else{
     getValidCell();
     if(lost_game){
-      findMerge();
-      transpose();
       findMerge();
       if(lost_game){
       $(".dialog-fail").css("display","block")

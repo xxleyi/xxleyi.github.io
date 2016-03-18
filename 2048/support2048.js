@@ -114,7 +114,14 @@ function findMerge() {
 	for(var i=0;i<4;i++){
 		for(var j=0;j<3;j++){
 			if(board[i][j]==board[i][j+1]){
-				lost_game = false; 
+				lost_game = false;
+			}
+		}
+	}
+	for(var i=0;i<3;i++){
+		for(var j=0;j<4;j++){
+			if(board[i][j]==board[i+1][j]){
+				lost_game = false;
 			}
 		}
 	}
