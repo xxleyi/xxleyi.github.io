@@ -4,12 +4,13 @@ var lost_game = false;
 var score = 0;
 var direction = -1;
 var num_2048 = 0;
+var randomX = 0;
+var randomY= 0;
 $(document).ready(function(){
   newgame();
 });
 
 function newgame(){
-  num_2048 = 0;
   init();
   generateOneNumber();
   generateOneNumber();
@@ -27,6 +28,7 @@ function conti() {
 
 function init(){
   score = 0;
+  num_2048 = 0;
   $(".dialog-fail").css("display","none")
   $(".dialog-success").css("display","none")
   for(var i=0;i<4;i++){
@@ -63,21 +65,44 @@ function updateBoardView(){
       }
     }
   }
+  if(moved){
+    showNumberWithAnimation(randomX, randomY);
+  }
 }
 
 function generateOneNumber(){
   var temp = new Array();
   temp = getValidCell();
   tempNum = temp[Math.floor(temp.length * Math.random())];
-  var randomX = parseInt(tempNum / 4);
-  var randomY = parseInt(tempNum % 4);
+  randomX = parseInt(tempNum / 4);
+  randomY = parseInt(tempNum % 4);
   var randomNumber = Math.random()<0.7?2:4;
   board[randomX][randomY] = randomNumber;
-  // showNumberWithAnimation(randomX, randomY, randomNumber);
-  return true;
+}
+
+function showNumberWithAnimation(randomX, randomY) {
+  var theNumberCell = $("#grid-cell-"+randomX+"-"+randomY);
+  theNumberCell.animate({
+    opacity:'0.4',
+    width:"30px",
+    marginLeft:"0px",
+    marginRight:"90px"
+  },100);
+  theNumberCell.animate({
+    opacity:'1',
+    width:"100px",
+    marginLeft:"10px",
+    marginRight:"10px"
+  },200);
+}
+
+function stopAnimation(randomx, randomy) {
+  var theNumberCell = $("#grid-cell-"+randomX+"-"+randomY);
+  theNumberCell.stop();
 }
 
 $(document).keydown(function (event) {
+  stopAnimation(randomX, randomY);
   move();
   find2048();
   if(moved){
@@ -91,8 +116,8 @@ $(document).keydown(function (event) {
       }
     }
   }
-  moved = false;
   updateBoardView();
+  moved = false;
 })
 
 document.addEventListener('touchstart',function(event){
