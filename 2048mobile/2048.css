@@ -1,0 +1,119 @@
+html{
+  font-size: 1rem;
+}
+
+header {
+  width: 24rem;
+  height: auto;
+  margin: auto;
+  text-align: center;
+}
+
+
+header h2 {
+  margin: 1rem auto;
+  text-align: center;
+}
+
+header #newgame{
+  text-decoration: none;
+  color: white;
+  background-color: #C5B883;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+header #newgame:hover{
+  background-color: #B4A569;
+}
+
+#grid-container {
+  position: relative;
+  z-index: 0;
+  width: 24rem;
+  margin: 0.5rem auto;
+  height: 24rem;
+  background-color: #7a7a52;
+  padding: 0.5rem;
+  border-radius: 12rem;
+}
+
+.grid-cell {
+  z-index: -1;
+  width: 5rem;
+  height: 5rem;
+  border: 0rem;
+  margin: 0.5rem;
+  background-color: #999966;
+  float: left;
+  border-radius: 0.3rem;
+  text-align: center;
+  line-height: 5rem;
+  font-family:Arial,Microsoft Yahei;
+  font-weight: bold;
+  font-size: 3.5em;
+  overflow: hidden;
+}
+
+.dialog-fail{
+  position: absolute;
+  left: -0.25rem;
+  top: -0.25rem;
+  padding: 0.5rem;
+  margin: auto;
+  width: 24.5rem;
+  height: 24.5rem;
+  background: none repeat scroll 0% 0% rgba(221, 211, 194, 0.8);
+  line-height: 2.5rem;
+  border-radius: 0.9rem;
+  text-align: center;
+  display: none;
+}
+
+.fail {
+  position: relative;
+  top: 30%;
+  font-size: 1em;
+  font-family: Microsoft Yahei;
+  margin: auto;
+}
+
+#newgame{
+  text-decoration: none;
+  color: white;
+  background-color: #C5B883;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+.dialog-fail h2 {
+  margin: 0 auto;
+}
+
+.dialog-success {
+  position: absolute;
+  top:-0.25rem;
+  left:-0.25rem;
+  width: 24.5rem;
+  height: 24.5rem;
+  padding: 0.5rem;
+  margin: auto;
+  background: none repeat scroll 0% 0% rgba(255, 102, 0, 0.8);
+  line-height: 2.5rem;
+  border-radius: 0.9rem;
+  text-align: center;
+  display: none;
+}
+
+.success {
+  position: relative;
+  top: 30%;
+}
+
+#conti {
+  text-decoration: none;
+  color: white;
+  background-color: #b34700;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
