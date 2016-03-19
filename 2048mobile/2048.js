@@ -10,11 +10,14 @@ $(document).ready(function(){
   if(!(isPC())){
     $("html").css("font-size","30px");
   }
+  $("html").css("font-size","30px");
   newgame();
 });
 
 function newgame(){
   init();
+  generateOneNumber();
+  generateOneNumber();
   generateOneNumber();
   generateOneNumber();
   updateBoardView();

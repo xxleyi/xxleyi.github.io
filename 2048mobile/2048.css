@@ -33,7 +33,7 @@ header #newgame:hover{
   width: 24rem;
   margin: 0.5rem auto;
   height: 24rem;
-  background-color: #7a7a52;
+  background-color: #00bfff;
   padding: 0.5rem;
   border-radius: 12rem;
 }
@@ -44,7 +44,7 @@ header #newgame:hover{
   height: 5rem;
   border: 0rem;
   margin: 0.5rem;
-  background-color: #999966;
+  background-color: #66ffff;
   float: left;
   border-radius: 0.3rem;
   text-align: center;
