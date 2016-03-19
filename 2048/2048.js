@@ -157,7 +157,7 @@ document.addEventListener('touchend',function(event){
       direction = 3;
     }
   }
-
+  stopAnimation();
   moveMobile();
   find2048();
   if(moved){
@@ -171,9 +171,8 @@ document.addEventListener('touchend',function(event){
       }
     }
   }
-  moved = false;
   updateBoardView();
-
+  moved = false;
 });
 
 function move(){
