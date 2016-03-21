@@ -9,6 +9,20 @@ header {
   text-align: center;
 }
 
+h5 {
+  margin: 0.15rem;
+  color: grey;
+}
+
+h5 a{
+  text-decoration: none;
+  color: green;
+}
+
+#thanks a:hover{
+  text-decoration: none;
+  color: red;
+}
 
 header h2 {
   margin: 1rem auto;
