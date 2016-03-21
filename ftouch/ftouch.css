@@ -19,7 +19,7 @@ h2{
 }
 main{
   text-align: center;
-  width: 10.5rem;
+  width: 9.5rem;
   height: 6rem;
   margin: auto;
 }
@@ -31,4 +31,13 @@ main{
   margin: 0.25rem 0.25rem;
   float: left;
   border-radius: 1.5rem;
+}
+
+#middle-button{
+  width:2rem;
+  height: 2rem;
+  background-color: #00b300;
+  margin: 0.75rem 0.25rem;
+  float: left;
+  border-radius: 1rem;
 }
