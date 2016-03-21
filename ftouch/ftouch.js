@@ -48,9 +48,9 @@ document.addEventListener('touchstart', function(event){
   if(touched==1){
     newgame();
   }
-  if(ltouched * rtouched == 0){
+  if(ltouched + rtouched == 1){
     score += 1;
-      $("#score-button").text("score:"+score);
+    $("#score-button").text("score:"+score);
   }
 
 })
