@@ -118,6 +118,7 @@ $(document).keydown(function (event) {
   }
   updateBoardView();
   moved = false;
+
 })
 
 document.addEventListener('touchstart',function(event){
