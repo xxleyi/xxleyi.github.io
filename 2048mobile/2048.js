@@ -8,7 +8,7 @@ var randomX = 0;
 var randomY= 0;
 $(document).ready(function(){
   if(!(isPC())){
-    $("html").css("font-size","30px");
+    $("html").css("font-size","40px");
   }
   newgame();
 });
