@@ -14,6 +14,6 @@ function init() {
 //
 // }
 
-$("#middle-button").on("tap",function(){
+$("#middle-button").addEventListener("touch",function(){
   $("#score-button").css("background-color","grey")
 })
