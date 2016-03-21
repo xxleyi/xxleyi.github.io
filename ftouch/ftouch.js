@@ -1,7 +1,7 @@
 var score = 0;
-var touched = false;
-var ltouched = false;
-var rtouched = false;
+var touched = 0;
+var ltouched = 0;
+var rtouched = 0;
 $(document).ready(function() {
   newgame();
   var mButton = document.getElementById("middle-button");
@@ -9,38 +9,34 @@ $(document).ready(function() {
   var rButton = document.getElementById("right-button");
   mButton.addEventListener("touchstart",function(event){
   $("#score-button").css("background-color","grey");
-  touched = true;
+  touched = 0;
   })
 
   mButton.addEventListener("touchend",function(event){
   $("#score-button").css("background-color","red");
-  touched = false;
+  touched = 1;
   })
 
   lButton.addEventListener("touchstart",function(event){
   $("#left-button").css("background-color","blue");
-  louched = true;
-  score += 1;
+  louched = 1;
   })
 
   lButton.addEventListener("touchend",function(event){
-  $("#left-button").css("background-color","red");
-  louched = false;
+  $("#left-button").css("background-color","green");
+  louched = 0;
 
   })
 
   rButton.addEventListener("touchstart",function(event){
   $("#right-button").css("background-color","blue");
-  rouched = true;
-  score += 1;
+  rouched = 1;
   })
 
   rButton.addEventListener("touchend",function(event){
-  $("#right-button").css("background-color","red");
-  rouched = false;
+  $("#right-button").css("background-color","green");
+  rouched = 0;
   })
-
-
 
 })
 
@@ -49,5 +45,12 @@ function newgame() {
 }
 
 document.addEventListener('touchstart', function(event){
-  $("#score-button").text("score:"+score);
+  if(touched==1){
+    newgame();
+  }
+  if(ltouched * rtouched == 0){
+    score += 1;
+      $("#score-button").text("score:"+score);
+  }
+
 })
