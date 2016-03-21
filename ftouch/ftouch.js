@@ -14,6 +14,7 @@ function init() {
 //
 // }
 
-$("#middle-button").addEventListener("touchend",function(){
-  $("#score-button").css("background-color","grey")
+document.addEventListener("touchend",function(){
+  $("#score-button").css("background-color","grey");
+  console.log("shit")
 })
