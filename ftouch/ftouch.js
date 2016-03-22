@@ -2,17 +2,19 @@ var score = 0;
 var touched = false;
 var ltouched = 1;
 var rtouched = 2;
+var intervalTimecount;
 $(document).ready(function() {
   newgame();
   $("#game-over").show();
   var mButton = document.getElementById("middle-button");
   var lButton = document.getElementById("left-button");
   var rButton = document.getElementById("right-button");
-  mButton.addEventListener("mousedown",function(event){
+  mButton.addEventListener("touchstart",function(event){
     event.preventDefault();
     $("#score-button").css("background-color","grey");
     touched = true;
-    timeCount();
+    t = setTimeout('gameOver()',13000);
+    intervalTimecount = setInterval("timeCount()",1000);
   })
 
   mButton.addEventListener("touchend",function(event){
@@ -53,20 +55,27 @@ $(document).ready(function() {
 })
 
 function newgame() {
-  var score = 0;
-  var touched = false;
-  var ltouched = 1;
-  var rtouched = 2;
+  timeNum = 0;
+  score = 0;
+  touched = false;
+  ltouched = 1;
+  rtouched = 2;
   $("#score-button").text("score:"+0);
+  $("#time").text("Time:"+13+'s');
   $("#score-button").css("background-color","red");
   $("#game-over").hide();//css("display","none");
 }
 
+function gameOver() {
+  clearInterval(intervalTimecount);
+  $("#score-end").text("score:"+score)
+  $("#game-over").show();
+}
+
 var timeNum = 0;
 function timeCount() {
-  $("#time").text("Time:"+timeNum);
+  $("#time").text("Time:"+(12-timeNum)+'s');
   timeNum += 1;
-  t = setTimeout("timeCount()",1000)
 }
 
 document.addEventListener('touchstart', function(event){
