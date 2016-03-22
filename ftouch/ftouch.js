@@ -5,17 +5,20 @@ var rtouched = 2;
 var intervalTimecount;
 $(document).ready(function() {
   newgame();
-  $("#game-over").show();
+  // $("#game-over").show();
   var bButton = document.getElementById("game-begin");
   var mButton = document.getElementById("middle-button")
   var lButton = document.getElementById("left-button");
   var rButton = document.getElementById("right-button");
   bButton.addEventListener("touchstart",function(event){
-    event.preventDefault();
-    $("#score-button").css("background-color","grey");
-    touched = true;
-    t = setTimeout('gameOver()',13000);
-    intervalTimecount = setInterval("timeCount()",1000);
+    if(!touched){
+      event.preventDefault();
+      $("#score-button").css("background-color","red");
+      $("#game-begin").css("box-shadow","0rem 0.3rem 0.3rem #737373")
+      touched = true;
+      t = setTimeout('gameOver()',13000);
+      intervalTimecount = setInterval("timeCount()",1000);
+    }
   })
   mButton.addEventListener("touchstart",function(event){
     $("#score-button").css("background-color","red");
@@ -64,26 +67,31 @@ function newgame() {
   touched = false;
   ltouched = 1;
   rtouched = 2;
-  $("#score-button").text("score:"+0);
-  $("#time").text("Time:"+12+'s');
+  $("#score-button").text("点击次数:"+0);
+  $("#time").text("倒计时:"+12+'s');
+  $("#game-begin").css("box-shadow","0rem 0rem 0rem #737373")
   $("#score-button").css("background-color","red");
   $("#game-over").hide();//css("display","none");
 }
 
 function gameOver() {
   clearInterval(intervalTimecount);
-  $("#score-end").text("score:"+score)
+  $("#score-end").text("点击次数:"+score)
   $("#game-over").show();
 }
 
 var timeNum = 0;
 function timeCount() {
-  $("#time").text("Time:"+(11-timeNum)+'s');
+  $("#time").text("倒计时:"+addZero(11-timeNum)+'s');
   timeNum += 1;
+}
+
+function addZero(vNumber) {
+  return ((vNumber<10)?"0":"")+vNumber;
 }
 
 document.addEventListener('touchstart', function(event){
   if(touched){
-    $("#score-button").text("score:"+score);
+    $("#score-button").text("点击次数:"+score);
   }
 })
