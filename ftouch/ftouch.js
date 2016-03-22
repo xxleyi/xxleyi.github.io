@@ -7,13 +7,13 @@ $(document).ready(function() {
   var mButton = document.getElementById("middle-button");
   var lButton = document.getElementById("left-button");
   var rButton = document.getElementById("right-button");
-  mButton.addEventListener("touchstart",function(event){
+  mButton.addEventListener("mousedown",function(event){
     event.preventDefault();
     $("#score-button").css("background-color","grey");
     touched = true;
   })
 
-  mButton.addEventListener("touchend",function(event){
+  mButton.addEventListener("mouseup",function(event){
     $("#score-button").css("background-color","red");
     touched = false;
   })
