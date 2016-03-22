@@ -8,8 +8,9 @@ $(document).ready(function() {
   var lButton = document.getElementById("left-button");
   var rButton = document.getElementById("right-button");
   mButton.addEventListener("touchstart",function(event){
-  $("#score-button").css("background-color","grey");
-  touched = true;
+    event.preventDefault();
+    $("#score-button").css("background-color","grey");
+    touched = true;
   })
 
   mButton.addEventListener("touchend",function(event){
@@ -18,6 +19,7 @@ $(document).ready(function() {
   })
 
   lButton.addEventListener("touchstart",function(event){
+    event.preventDefault();
     if(touched){
       if(ltouched<rtouched){
         $("#left-button").css("background-color","blue");
@@ -32,6 +34,7 @@ $(document).ready(function() {
   })
 
   rButton.addEventListener("touchstart",function(event){
+    event.preventDefault();
     if(touched){
       if(rtouched<ltouched){
         $("#right-button").css("background-color","blue");
