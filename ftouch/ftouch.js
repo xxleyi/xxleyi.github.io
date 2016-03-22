@@ -12,11 +12,12 @@ $(document).ready(function() {
     event.preventDefault();
     $("#score-button").css("background-color","grey");
     touched = true;
+    timeCount();
   })
 
   mButton.addEventListener("touchend",function(event){
     $("#score-button").css("background-color","red");
-    touched = false;
+    // touched = false;
   })
 
   lButton.addEventListener("touchstart",function(event){
@@ -57,7 +58,15 @@ function newgame() {
   var ltouched = 1;
   var rtouched = 2;
   $("#score-button").text("score:"+0);
+  $("#score-button").css("background-color","red");
   $("#game-over").hide();//css("display","none");
+}
+
+var timeNum = 0;
+function timeCount() {
+  $("#time").text("Time:"+timeNum);
+  timeNum += 1;
+  t = setTimeout("timeCount()",1000)
 }
 
 document.addEventListener('touchstart', function(event){
