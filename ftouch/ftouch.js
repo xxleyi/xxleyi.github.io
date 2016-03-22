@@ -13,7 +13,7 @@ $(document).ready(function() {
     touched = true;
   })
 
-  mButton.addEventListener("mouseup",function(event){
+  mButton.addEventListener("touchend",function(event){
     $("#score-button").css("background-color","red");
     touched = false;
   })

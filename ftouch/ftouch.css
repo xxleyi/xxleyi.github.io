@@ -11,12 +11,12 @@ h2{
 }
 
 #score-button{
-  width: 2rem;
-  height: 0.5rem;
+  width: 4rem;
+  height: 0.9rem;
   background-color: red;
   border-radius: 1rem;
   margin: 0rem  auto 1.5rem;
-  font-size: 0.4rem;
+  font-size: 0.8rem;
   padding: 0.2rem;
   text-align: center;
 }
