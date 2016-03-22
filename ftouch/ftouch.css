@@ -70,6 +70,15 @@ h5{
 h5 a{
   text-decoration: none;
 }
+
+h6{
+  margin: 0.5rem auto;
+  padding: 0.5rem;
+  width: 3rem;
+  text-align: center;
+  background-color: grey;
+  border-radius: 1rem;
+}
 #game-over{
   position: absolute;
   padding: 3rem 0rem;

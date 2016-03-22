@@ -6,19 +6,23 @@ var intervalTimecount;
 $(document).ready(function() {
   newgame();
   $("#game-over").show();
-  var mButton = document.getElementById("middle-button");
+  var bButton = document.getElementById("game-begin");
+  var mButton = document.getElementsById("middle-button")
   var lButton = document.getElementById("left-button");
   var rButton = document.getElementById("right-button");
-  mButton.addEventListener("touchstart",function(event){
+  bButton.addEventListener("touchstart",function(event){
     event.preventDefault();
     $("#score-button").css("background-color","grey");
     touched = true;
     t = setTimeout('gameOver()',13000);
     intervalTimecount = setInterval("timeCount()",1000);
   })
-
-  mButton.addEventListener("touchend",function(event){
+  mButton.addEventListener("touchstart",function(event){
     $("#score-button").css("background-color","red");
+    // touched = false;
+  })
+  mButton.addEventListener("touchend",function(event){
+    $("#score-button").css("background-color","grey");
     // touched = false;
   })
 
@@ -61,7 +65,7 @@ function newgame() {
   ltouched = 1;
   rtouched = 2;
   $("#score-button").text("score:"+0);
-  $("#time").text("Time:"+13+'s');
+  $("#time").text("Time:"+12+'s');
   $("#score-button").css("background-color","red");
   $("#game-over").hide();//css("display","none");
 }
@@ -74,7 +78,7 @@ function gameOver() {
 
 var timeNum = 0;
 function timeCount() {
-  $("#time").text("Time:"+(12-timeNum)+'s');
+  $("#time").text("Time:"+(11-timeNum)+'s');
   timeNum += 1;
 }
 
