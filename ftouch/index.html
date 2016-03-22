@@ -10,12 +10,20 @@
 <body>
   <header>
     <h2>测测你的手速有多快</h2>
+    <div id="time-score">
+      <h4>Time:3s</h4>
+      <h4 id="score-button"></h4>
+    </div>
   </header>
-  <div id="score-button"></div>
+  <!-- <div id="score-button"></div> -->
   <main>
     <div class="touch-button" id="left-button"></div>
     <div class="touch-button" id="middle-button"></div>
     <div class="touch-button" id="right-button"></div>
+    <div id="game-over">
+      <h5 >score</h5>
+      <h5><a href="javascript:newgame()">NewGame</a></h5>
+    </div>
   </main>
 </body>
 </html>

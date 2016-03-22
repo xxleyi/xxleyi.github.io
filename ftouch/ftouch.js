@@ -4,6 +4,7 @@ var ltouched = 1;
 var rtouched = 2;
 $(document).ready(function() {
   newgame();
+  $("#game-over").show();
   var mButton = document.getElementById("middle-button");
   var lButton = document.getElementById("left-button");
   var rButton = document.getElementById("right-button");
@@ -56,6 +57,7 @@ function newgame() {
   var ltouched = 1;
   var rtouched = 2;
   $("#score-button").text("score:"+0);
+  $("#game-over").hide();//css("display","none");
 }
 
 document.addEventListener('touchstart', function(event){

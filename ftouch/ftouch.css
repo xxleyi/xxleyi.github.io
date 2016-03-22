@@ -6,21 +6,36 @@ html{
   margin: auto;
 }*/
 
-h2{
+h2, h4{
   text-align: center;
+  margin: 0.1rem 0;
 }
 
-#score-button{
+h4{
+  color: white;
+  background-color: grey;
+  width: 5rem;
+  border-radius: 1rem;
+  display: inline-block;
+}
+
+#time-score{
+  width: 10.5rem;
+  margin: 0 auto 1rem;
+}
+
+/*#score-button{
   width: 4rem;
   height: 0.9rem;
   background-color: red;
   border-radius: 1rem;
-  margin: 0rem  auto 1.5rem;
+  margin: 0.4rem  auto 1.5rem;
   font-size: 0.8rem;
   padding: 0.2rem;
   text-align: center;
-}
+}*/
 main{
+  position: relative;
   text-align: center;
   width: 9.5rem;
   height: 6rem;
@@ -28,6 +43,7 @@ main{
 }
 
 .touch-button{
+  z-index: -1;
   width:3rem;
   height: 3rem;
   background-color: #00b300;
@@ -43,4 +59,25 @@ main{
   margin: 0.75rem 0.25rem;
   float: left;
   border-radius: 1rem;
+}
+
+h5{
+  text-align: center;
+  margin: 0 auto 0.65rem;
+  color: white;
+}
+
+h5 a{
+  text-decoration: none;
+}
+#game-over{
+  position: absolute;
+  padding: 3rem 0rem;
+  left: 0;
+  top: 0;
+  width: 9.5rem;
+  background-color: red;
+  opacity: 0.6;
+  height: 2rem;
+  border-radius: 1.5rem;
 }
