@@ -7,7 +7,7 @@ $(document).ready(function() {
   newgame();
   $("#game-over").show();
   var bButton = document.getElementById("game-begin");
-  var mButton = document.getElementsById("middle-button")
+  var mButton = document.getElementById("middle-button")
   var lButton = document.getElementById("left-button");
   var rButton = document.getElementById("right-button");
   bButton.addEventListener("touchstart",function(event){
