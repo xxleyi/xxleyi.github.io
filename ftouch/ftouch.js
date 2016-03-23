@@ -71,13 +71,13 @@ function newgame() {
   $("#time").text("倒计时:"+12+'s');
   $("#game-begin").css("box-shadow","0rem 0rem 0rem #737373")
   $("#score-button").css("background-color","red");
-  $("#game-over").hide();//css("display","none");
+  $("#game-over").css("display","none");//css("display","none");
 }
 
 function gameOver() {
   clearInterval(intervalTimecount);
   $("#score-end").text("点击次数:"+score)
-  $("#game-over").show();
+  $("#game-over").css("display","block")//show();
 }
 
 var timeNum = 0;
