@@ -44,8 +44,8 @@ main h1{
 }
 
 main h2{
-  text-shadow: 4px 4px 4px grey;
-  color:#66a3ff;
+  text-shadow: 2px 2px 2px grey;
+  color:#0073e6;
 }
 blockquote{
   border-left: 2px solid #bfbfbf;
