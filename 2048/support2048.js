@@ -9,21 +9,21 @@ documentHeight = window.screen.height;
 function getNumberCellBgColor(number){
 
 	switch(number){
-		case 2:return "#eee4da"; break;
-		case 4:return "#ede0c8"; break;
-		case 8:return "#f2b179"; break;
-		case 16:return "#f59563"; break;
-		case 32:return "#f67c5f"; break;
-		case 64:return "#ec6544"; break;
-		case 128:return "#e44d29"; break;
-		case 256:return "#edcf72"; break;
-		case 512:return "#c8a145"; break;
-		case 1024:return "#a8832b"; break;
-		case 2048:return "#86aa9c"; break;
-		case 4096:return "#a6c"; break;
-		case 8192:return "#791e6f"; break;
+		case 2:return "#ddffcc"; break;
+		case 4:return "#99ff99"; break;
+		case 8:return "#00cccc"; break;
+		case 16:return "#0099ff"; break;
+		case 32:return "#73e600"; break;
+		case 64:return "#99ff33"; break;
+		case 128:return "#cc6600"; break;
+		case 256:return "#ff9999"; break;
+		case 512:return "#ffccff"; break;
+		case 1024:return "#ffe6b3"; break;
+		case 2048:return "#66ff66"; break;
+		case 4096:return "#8c8c8c"; break;
+		case 8192:return "#5c5c8a"; break;
 	}
-	return "grey";
+	return "#e0e0eb";
 
 }
 
@@ -65,17 +65,17 @@ function getNumberCellFontSize(number){
 		return "3em";
 	}else if(number <= 512){
 		return "2.5em";
-	}else if(number <=99999){
+	}else if(number <=9999){
 		return "2em";
 	}else {
-		return "1.5em";
+		return "1.8em";
 	}
 return "1em";
 }
 
 function getNumberCellFontColor(number){
 	if(number <= 4){
-		return "#776e65";
+		return "#grey";
 	}
 	return "white";
 }

@@ -7,11 +7,16 @@ var num_2048 = 0;
 var randomX = 0;
 var randomY= 0;
 $(document).ready(function(){
+  if(!(isPC())){
+    $("html").css("font-size","30px");
+  }
   newgame();
 });
 
 function newgame(){
   init();
+  generateOneNumber();
+  generateOneNumber();
   generateOneNumber();
   generateOneNumber();
   updateBoardView();
@@ -84,15 +89,15 @@ function showNumberWithAnimation(randomX, randomY) {
   var theNumberCell = $("#grid-cell-"+randomX+"-"+randomY);
   theNumberCell.animate({
     opacity:'0.4',
-    width:"30px",
-    marginLeft:"0px",
-    marginRight:"90px"
+    width:"1.5rem",
+    marginLeft:"0rem",
+    marginRight:"4.5rem"
   },100);
   theNumberCell.animate({
     opacity:'1',
-    width:"100px",
-    marginLeft:"10px",
-    marginRight:"10px"
+    width:"5rem",
+    marginLeft:"0.5rem",
+    marginRight:"0.5rem"
   },200);
 }
 
