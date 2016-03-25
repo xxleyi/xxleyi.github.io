@@ -2,8 +2,6 @@
 	<html>
 		<head>
 			<title>{{ page.title }}</title>
-			<!-- link to main stylesheet -->
-			<!-- <link rel="stylesheet" type="text/css" href="/css/post_test.css"> -->
 			<link rel="stylesheet" type="text/css" href="/css/post.css">
 			<link rel="stylesheet" type="text/css" href="/css/pygments.css">
 		</head>
@@ -12,16 +10,16 @@
 	    		<ul>
 	        		<li><a href="/">Home</a></li>
 		        	<li><a href="/about">About</a></li>
-	        		<li><a href="/cv">CV</a></li>
 	        		<li><a href="/blog">Blog</a></li>
 	    		</ul>
 			</nav>
-			<div class="container">
+			<main>
 
 			{{ content }}
 
-			<div class="push"></div>
-			</div><!-- /.container -->
+ 	    <div class="push"></div>
+		</main>
+
 
 
 		</body>

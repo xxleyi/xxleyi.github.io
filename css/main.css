@@ -1,38 +1,82 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
 body {
-    margin: 60px auto;
-    width: 61.8%;
-	  height: 100%;
+    margin: auto;
+    padding: 0;
+    width: 1000px;
     background-color: #e0e0eb;
-    font-size: 62.5%
+    font-size: 100%;
+}
+
+
+main{
+  max-width: 600px;
+  margin: auto;
+}
+nav{
+  position: fixed;
+  padding-top: 40px;
+  width: 180px;
+  height: 300px;
+}
+nav h1{
+  text-align: right;
+  font-size: 1.6em;
+  color: #990033;
+}
+aside{
+  float: right;
+  padding-top: 30px;
+
+}
+
+aside h3{
+    font-weight: lighter;
+    color: #990033;
 }
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
+    line-height: 150%;
     list-style: none;
     font-weight: bold;
+    color:#999;
 }
 
-footer ul {
-  position:absolute;
-  left:19.1%;
-  width:100%;
-  bottom:50%;
+footer{
+   clear: both;
+   position: fixed;
+   bottom:0;
+   margin-left: 180px;
 }
-nav ul li, footer ul li {
-    display: inline;
-    margin-right: 20px;
+
+footer li{
+  display: inline-block;
+  margin-left: 20px;
+}
+nav li{
+    /*margin-right: 20px;*/
+    float: right;
+    clear: both;
 }
 a {
     text-decoration: none;
     color: #999;
 }
 a:hover {
-    text-decoration: underline;
+    text-decoration: none;
+    color: #ffaa00;
+    text-shadow: 1px 1px 1px grey;
+    font-size: 1.1em;
 }
 h1 {
     font-size: 2em;
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     text-align: center;
+    color: #990033;
 }
 p {
     font-size: 1.5em;
@@ -40,29 +84,23 @@ p {
     color: #333;
     text-align: center;
 }
-footer {
-    border-top: 1px white;
-    font-size: .8em;
-    width: 100%;
-    position:absolute;
-    left: 0;
-    bottom: 0;
-    background-color: #d0d0e1;
-    height: 10px;
+
+#posts li{
+    margin-left: 60px;
+    line-height: 150%;
 }
 
-ul.posts {
-    margin: 20px auto 40px;
-    font-size: 1.5em;
+#posts a{
+  color: #00cc00;
+  font-size: 1.1em;
 }
 
-ul.posts li {
-    list-style: none;
+#posts a:hover{
+  color:#ff7733;
+  font-size: 1.2em;
+  text-shadow: 4px 4px 4px grey;
 }
 
-.container {
-
-}
 
 .center {
   margin:auto;
