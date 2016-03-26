@@ -5,7 +5,8 @@ html{
 body {
     max-width: 900px;
     margin:auto;
-    font-size: 100%
+    font-size: 100%;
+    background-color: #e0e0eb;
 }
 
 nav ul{
