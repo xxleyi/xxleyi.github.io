@@ -15,6 +15,7 @@ body {
 main{
   max-width: 600px;
   margin: auto;
+  box-sizing: 0px 4px 4px grey;
 }
 nav{
   position: fixed;
