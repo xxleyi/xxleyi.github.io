@@ -18,6 +18,7 @@ main{
   background-color: rgba(255,255,255,.25);
   box-shadow: 0 1rem 1rem rgba(0,0,0,.6);
   margin-bottom: 60px;
+  padding: 1rem 0.5rem;
 }
 nav{
   position: fixed;
@@ -51,8 +52,7 @@ nav ul, footer ul {
 
 footer{
    clear: both;
-   position: fixed;
-   bottom:0;
+   position: relative;
    margin-left: 180px;
 }
 
