@@ -68,6 +68,6 @@ Unicode之下具体的编码方式也有很多，我现在只用记着utf-8，�
 
 愿自己一直记得这句话，且记得：自己本文讲得很不严谨，但也算是给自己编了一个还行得通的关于字符编码的小故事。再接再厉吧！
 
-阮一峰老师博客地址：http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html
+[阮一峰老师博客地址：http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html](http://www.ruanyifeng.com/blog/2007/10/ascii_unicode_and_utf-8.html)
 
-最后一段话出处：http://www.joelonsoftware.com/articles/Unicode.html
+[最后一段话出处：http://www.joelonsoftware.com/articles/Unicode.html](http://www.joelonsoftware.com/articles/Unicode.html)
