@@ -13,7 +13,7 @@ body {
 
 
 main{
-  max-width: 600px;
+  max-width: 580px;
   margin: auto;
   background-color: rgba(255,255,255,.25);
   box-shadow: 0 1rem 1rem rgba(255,255,255,.25);
@@ -33,7 +33,7 @@ nav h1{
 }
 aside{
   float: right;
-  padding-top: 30px;
+  padding-top: 40px;
 
 }
 
