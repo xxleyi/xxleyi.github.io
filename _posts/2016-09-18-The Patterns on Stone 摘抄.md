@@ -1,6 +1,6 @@
 ---
-"title": "计算机得以工作的层级结构"
-"date": 2016-09-09
+"title": "The Patterns on Stone 摘抄"
+"date": 2016-09-18
 ---
 
 ## 摘抄
