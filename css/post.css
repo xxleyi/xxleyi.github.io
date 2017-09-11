@@ -10,7 +10,6 @@ body {
 }
 
 nav ul{
-    font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
     list-style: none;
     font-weight: bold;
@@ -21,6 +20,7 @@ nav ul li{
     display: inline;
     margin-right: 20px;
 }
+
 a {
     text-decoration: none;
     color: #33cc33;
@@ -29,14 +29,6 @@ a:hover {
     text-decoration: none;
     color:#ffaa00;
 }
-
-/*main{
-  background-color: #999999;
-  box-shadow: 0px 20px 30px grey;
-  color: #4d4d4d;
-  margin-bottom: 50px;
-  padding: 60px 40px;
-}*/
 
 main{
   background-color: rgba(255,255,255,.25);
@@ -79,5 +71,5 @@ nav{
   background-color: #e0e0eb;
   margin: 0px;
   width: 1100px;
-  opacity:0.6;
+  opacity: 0.6;
 }
