@@ -26,6 +26,7 @@ function measureText(text) {
   return Math.ceil(width) + 4
 }
 
+
 function drawLine(context, begin, end, width = 2) {
   // context.beginPath()
   // context.setLineCap('round')
@@ -175,7 +176,8 @@ var app = new Vue({
 		listsRowNum: 1,
 		contentLastLine: null,
 		canvasWidth: 0,
-		canvasHeight: 0
+		canvasHeight: 0,
+		imgURL: ''
 	},
 	methods: {
 		handlePrefix: function (e) {
@@ -276,8 +278,11 @@ var app = new Vue({
 			    ctx.fillStyle = '#ffffff'
 			    ctx.fillRect(0, 0, width, height)
 			    ctx.lineCap = 'round' 
-			    ctx.font = 10 * ratio + 'px'
+			    ctx.font = 10 * ratio + 'px' + ' Arial'
 			    drawEach(ctx, nodes[0], nodeX, 20 + 10 * ratio)
+			    setTimeout(() => {
+				    this.imgURL = c.toDataURL('image/png').replace("image/png", "image/octet-stream")
+			    }, 100)
 		    }, 500)
 
 		  },

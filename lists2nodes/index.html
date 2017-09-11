@@ -6,7 +6,8 @@
 	</head>
 	<body>
 	<div id="app">
-	<button @click="drawNodes"> 绘制导图 </button>
+	<button id="drawNodes" @click="drawNodes"> 绘制导图 </button>
+	<a download="nodes.jpg" :href="imgURL"><img border="0" :src="imgURL" alt="导图图片" width="104" height="142"></a>
 	<textarea id="nodes"
 	:value="listsText"
 	:rows="listsRowNum"

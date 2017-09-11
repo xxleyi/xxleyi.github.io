@@ -4,7 +4,7 @@ textarea{
 	margin: 60px auto;
 	outline: none;
 	resize: none;
-	overflow: auto;
+	overflow: hidden;
 	border: none;
 	padding-left: 10px;
 	font-size: 18px;
@@ -13,4 +13,13 @@ textarea{
 
 textarea:focus{
 	border-left: solid 2px lightblue;
+}
+
+button#drawNodes{
+	border: none;
+	font-size: 1.5em;
+	display: block;
+	margin: 10px auto;
+	background: white;
+	color: lightblue;
 }
