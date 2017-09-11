@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Lists2Nodes</title>
+		<link rel="stylesheet" type="text/css" href="/lists2nodes/app.css">
+	</head>
+	<body>
+	<div id="app">
+	<textarea id="nodes"
+	:value="listsText"
+	:rows="listsRowNum"
+	@input="handlePrefix"
+	@focus="handleFocus"
+	:cursor="cursor"
+	placeholder="在此输入 lists..."></textarea>
+	<canvas id="nodesCanvas"></canvas>
+	</div>
+	
+	<script src="/lists2nodes/vue2.4.js"></script>
+	<script src="/lists2nodes/app.js"></script>
+	</body>
+</html>
