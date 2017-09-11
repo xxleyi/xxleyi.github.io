@@ -6,17 +6,20 @@
 	</head>
 	<body>
 	<div id="app">
+	<button @click="drawNodes"> 绘制导图 </button>
 	<textarea id="nodes"
 	:value="listsText"
 	:rows="listsRowNum"
-	@input="handlePrefix"
+	@keyup.enter="handlePrefix"
 	@focus="handleFocus"
-	:cursor="cursor"
 	placeholder="在此输入 lists..."></textarea>
-	<canvas id="nodesCanvas"></canvas>
+	<canvas id="nodesCanvas"
+	:width="canvasWidth"
+	:height="canvasHeight" 
+	></canvas>
 	</div>
 	
-	<script src="/lists2nodes/vue2.4.js"></script>
+	<script src="/lists2nodes/vue.min.2.4.js"></script>
 	<script src="/lists2nodes/app.js"></script>
 	</body>
 </html>
