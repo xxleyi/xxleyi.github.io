@@ -9,6 +9,8 @@ body {
     width: 1000px;
     background-color: #e0e0eb;
     font-size: 100%;
+    font-family: Helvetica, Tahoma, Arial, sans-serif;
+    line-height: 1.5;
 }
 
 
@@ -45,7 +47,6 @@ aside h3{
 nav ul, footer ul {
     font-family:'Helvetica', 'Arial', 'Sans-Serif';
     padding: 0px;
-    line-height: 150%;
     list-style: none;
     font-weight: bold;
     color:#999;
@@ -83,14 +84,12 @@ h1 {
 }
 p {
     font-size: 1.5em;
-    line-height: 1.4em;
     color: #333;
     text-align: center;
 }
 
 #posts li{
     margin-left: 60px;
-    line-height: 150%;
 }
 
 #posts a{
