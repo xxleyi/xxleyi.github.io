@@ -64,8 +64,8 @@ p{
 }
 
 em, strong{
-  font-weight: lighter;
-  color: #66e0ff;
+  font-weight: bolder;
+  color: lightskyblue;
 }
 
 nav{
