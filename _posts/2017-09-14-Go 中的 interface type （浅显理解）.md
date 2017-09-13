@@ -1,5 +1,5 @@
 ---
-'title': 'Go 中的 interface type'
+'title': 'Go 中的 interface type （浅显理解）'
 'date': 2017-09-14
 ---
 
