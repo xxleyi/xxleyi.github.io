@@ -55,3 +55,20 @@ interface 是一种数据类型，但这种数据类型存放的不只是所谓�
 
 差不多把我目前理解的 interface 全部讲出来了，浅显的很，但确实比 Java 丰富，比 Python 和 JS 来，机制也更清晰明了，虽然内部具体实现还是不清楚，但至少可以使用「指针」这个集抽象和具体操作于一体的概念进行一个脉络式把握。
 
+### 补遗
+
+interface 类型中的数据，不能直接拿到，而且不能通过直接的类型转换得到。
+
+Go 提供了两个方法：
+
+- type assertion
+	- with ok or not
+	- value := anyInterface.(T) or value, ok := anyInterface.(T)
+- type switch
+	- used to implement dynamic type task
+
+总结特点的话：
+
+- 类型断言旨在拿到 ADT 内部的真实数据
+- 类型开关旨在调用 ADT 内部的方法
+- 当然，也可以在恰当的时候灵活使用
