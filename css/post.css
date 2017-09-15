@@ -42,15 +42,15 @@ main {
   background-color: white;
   box-shadow: 0 1rem 1rem rgba(255,255,255,.25);
   color: #4d4d4d;
-  margin-bottom: 6rem;
-  padding: 6rem 4rem;
+  margin-bottom: 0rem;
+  padding: 3rem 2rem;
 }
 
 
 nav ul{
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    padding-left: 2rem;
+    padding-left: 3rem;
     list-style: none;
     font-weight: bold;
     margin-top: 0rem;
@@ -89,14 +89,14 @@ main h2 h3{
 }
 
 blockquote{
-  border-left: 1rem solid darkgrey;
+  border-left: 0.6rem solid darkgrey;
   padding-left: 0.6rem;
 /*  color: lightskyblue;*/
   margin: 1rem 1.2rem;
 }
 
 p{
-  padding: 1rem 1rem;
+  padding: 0.8rem 0.6rem;
 }
 
 em, strong{
