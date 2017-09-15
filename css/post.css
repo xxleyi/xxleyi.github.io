@@ -1,27 +1,37 @@
 html{
   margin: 0;
+  font-size: 10px;
 }
 
 body {
     max-width: 1100px;
     margin:auto;
-    font-size: 120%;
     background-color: #e0e0eb;
     font-family: -apple-system, BlinkMacSystemFont, "PingFang SC","Helvetica Neue", STHeiti, Helvetica, Tahoma, Arial, "Microsoft Yahei", sans-serif;
-    line-height: 1.8;
 }
 
+main {
+  font-size: 2rem;
+  line-height: 1.8;
+  background-color: white;
+  box-shadow: 0 1rem 1rem rgba(255,255,255,.25);
+  color: #4d4d4d;
+  margin-bottom: 6rem;
+  padding: 6rem 4rem;
+}
+
+
 nav ul{
-    padding: 0px;
+    padding: 0rem;
     list-style: none;
     font-weight: bold;
-    margin: 0px auto;
-    padding: 10px 0 10px 15px;
+    margin: 0rem auto;
+    padding: 1rem 0 1rem 15rem;
 }
 nav ul li{
     display: inline;
-    margin-right: 20px;
-    font-size: 1.8em;
+    margin-right: 2rem;
+    font-size: 2.2rem;
 }
 
 a {
@@ -33,39 +43,34 @@ a:hover {
     color:#ffaa00;
 }
 
-main{
-  background-color: white;
-  box-shadow: 0 1rem 1rem rgba(255,255,255,.25);
-  color: #4d4d4d;
-  margin-bottom: 60px;
-  padding: 60px 40px;
-}
+
 
 main h1{
   text-align: center;
-  text-shadow: 6px 6px 6px grey;
+  text-shadow: 0.6rem 0.6rem 0.6rem grey;
   color: #4d4d4d;
+  font-size: 2.4rem
 }
 
 main h2{
   color:#4d4d4d;
-  font-size: 1.2em;
+  font-size: 2.2rem;
 }
 
 blockquote{
-  border-left: 4px solid darkgrey;
-  padding-left: 6px;
+  border-left: 0.4rem solid darkgrey;
+  padding-left: 0.6rem;
 /*  color: lightskyblue;*/
-  margin: 10px 12px;
+  margin: 1rem 1.2rem;
 }
 
 p{
-  padding: 10px 10px;
+  padding: 1rem 1rem;
 }
 
 em, strong{
   font-weight: bolder;
-  font-size: 1.2;
+  font-size: 1.1;
   color: black;
 }
 
@@ -78,6 +83,6 @@ nav{
 }
 
 code{
-  font-size: 1.5em;
-  padding: 10px 20px;
+  font-size: 2.2rem;
+  padding: 1rem 1rem;
 }
