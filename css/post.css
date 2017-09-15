@@ -25,7 +25,9 @@ nav ul{
     padding: 0rem;
     list-style: none;
     font-weight: bold;
-    margin: 0rem auto;
+    margin-top: 0rem;
+    margin-left: 0rem;
+    margin-bottom: 0rem;
     padding: 1rem 0 1rem 15rem;
 }
 nav li{
