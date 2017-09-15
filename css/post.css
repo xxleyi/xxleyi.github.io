@@ -37,7 +37,7 @@ body {
 }
 
 main {
-  font-size: 2rem;
+  font-size: 1.8rem;
   line-height: 1.8;
   background-color: white;
   box-shadow: 0 1rem 1rem rgba(255,255,255,.25);
@@ -50,7 +50,7 @@ main {
 nav ul{
     padding-top: 0.5rem;
     padding-bottom: 0.5rem;
-    padding-left: 3rem;
+    padding-left: 2rem;
     list-style: none;
     font-weight: bold;
     margin-top: 0rem;
