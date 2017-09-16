@@ -3,8 +3,8 @@ layout: post
 title: 博客列表
 ---
 	
-	<ul id="posts" style="list-style-type: circle; margin-left: 0rem;">
+	<ul id="posts" style="list-style-type: circle; margin-left: 0rem; overflow: hidden; ">
 	  {% for post in site.posts %}
-	    <li style="margin-left: -2rem; font-size: 1.5rem;"><span style="font-size: 1rem;">{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
+	    <li style="float: left; margin-left: -2rem; font-size: 1.5rem;"><span style="font-size: 1rem;">{{ post.date | date_to_string }}</span> » <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a></li>
 	  {% endfor %}
 	</ul>
