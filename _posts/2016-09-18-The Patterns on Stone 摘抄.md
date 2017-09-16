@@ -2,6 +2,7 @@
 "title": "The Patterns on Stone 摘抄"
 "date": 2016-09-18
 ---
+# The Patterns on Stone 摘抄
 
 ## 摘抄
 

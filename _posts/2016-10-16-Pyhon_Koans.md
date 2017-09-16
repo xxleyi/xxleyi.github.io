@@ -3,7 +3,7 @@
 'date': 2016-10-16
 ---
 
-## 谈一谈 Python Koans
+# Python Koans
 
 前几天机缘巧合，再次遇到有人推荐 Python Koans 的练习项目。
 

@@ -2,8 +2,7 @@
 'title': 'Go 中的 interface type （浅显理解）'
 'date': 2017-09-14
 ---
-
-### Go 中的 interface type
+# Go 中的 interface type （浅显理解）
 
 Go 的设计确实很惊艳，不愧为「 21 世纪的 C 语言」。
 
