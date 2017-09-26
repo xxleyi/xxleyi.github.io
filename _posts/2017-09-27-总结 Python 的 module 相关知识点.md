@@ -63,4 +63,4 @@ dir() 查看某个模块或某个函数或某个类的成员，包括属性，�
 
 >  Packages support one more special attribute, \_\_path\_\_. This is initialized to be a list containing the name of the directory holding the package’s \_\_init\_\_.py before the code in that file is executed. This variable can be modified; doing so affects future searches for modules and subpackages contained in the package.
 
-#### footnote：Python 中的函数声明是顺次执行的，这也是 Python 模块中不需要额外声明函数变量的原因：当模块被导入时，函数声明会被自动执行，函数变量也会进入变量列表。
+#### footnote：Python 中的函数声明是顺次执行的，这也是 Python 模块中不需要额外声明函数变量的原因\-\-\-模块被导入时，函数声明会被自动执行，函数变量也会进入变量列表。
