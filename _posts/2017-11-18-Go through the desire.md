@@ -1,5 +1,5 @@
 ---
-'title': '趟过欲念，卸掉理性，重拾经验与信念 by wen'
+'title': 'Go through the desire'
 'date': 2017-11-18
 ---
 # 趟过欲念，卸掉理性，重拾经验与信念
