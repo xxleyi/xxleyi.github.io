@@ -5,7 +5,7 @@ date: 2016-04-23
 
 # 系统学习网络爬虫
 
-1. 从一个主域名获取HTML数据
+1. 从一个主域名获取 HTML 数据
 2. 解析数据，获得目标信息
 3. 存储目标信息到文件或数据库
 4. 移动到另一个页面继续采集信息
@@ -22,11 +22,11 @@ date: 2016-04-23
 
 浏览器只是一系列的代码，我们同样可以自己写代码实现这个联网并获取信息的过程。
 
-下面都是以Python3为基准。
+下面都是以 Python3 为基准。
 
-urllib.request中的urlopen可以打开一个网址，然后利用read()方法读取html的内容。
+urllib.request 中的 urlopen 可以打开一个网址，然后利用 read() 方法读取 html 的内容。
 
-另一强大便利的库是BeautifulSoup，可以将读取到的html内容转化为健壮性很强的对象，很适合摘取目标信息。
+另一强大便利的库是 BeautifulSoup，可以将读取到的 html 内容转化为健壮性很强的对象，很适合摘取目标信息。
 
 但，学习的第一课是：
 
@@ -62,25 +62,25 @@ urllib.request中的urlopen可以打开一个网址，然后利用read()方法�
 
 以上是一个处理异常的实例，目的在于告诫自己，处理异常很重要。
 
->解析html数据的一些方法
+>解析 html 数据的一些方法
 
 去除我们不需要的数据。锁定目标信息时尽量避免太多层级的搜索，这样很容易发生错误，目标网页也很容易改变。
 
-1. 是不是可以获取简单一些的html，比如打印版，比如手机版，等等。
-2. 寻求隐藏在JS中数据。为此需要处理JS文件。
-3. URL自身或许就携带了我们需要的数据。
+1. 是不是可以获取简单一些的 html，比如打印版，比如手机版，等等。
+2. 寻求隐藏在 JS 中数据。为此需要处理 JS 文件。
+3. URL 自身或许就携带了我们需要的数据。
 4. 换数据源。
 
 >BS中对象：
 
-1. BS对象
-2. Tag对象
-3. NavigableString对象
+1. BS 对象
+2. Tag 对象
+3. NavigableString 对象
 4. Comment object
 
 >dealing with children and other descendants
 
-1. children是孩子，descendtants是所有后代
+1. children 是孩子，descendtants 是所有后代
 
 >dealing with siblings
 
@@ -136,14 +136,14 @@ $ 放在结尾，否则正则表达式默认最后有个\*
 
 {% endhighlight %}
 
-BS允许使用lambda表达式，条件是，其函数参数必须为Tag对象，且返回Boolean值。
+BS 允许使用 lambda 表达式，条件是，其函数参数必须为 Tag 对象，且返回 Boolean 值。
 
 >soup.findAll(lambda tag: len(tag.attrs) == 2)
 
-除了BS以外，不要忘了其它可以用于Python Scraping的库，根据需求，可以择优选择。
+除了 BS 以外，不要忘了其它可以用于 Python Scraping 的库，根据需求，可以择优选择。
 
-1. lxml，基于c，可以解析HTML和XML，学习曲线比较陡峭，但值得一学，解析速度很快。
-2. HTML Parser Python内建的解析器，非常方便。
+1. lxml，基于 c，可以解析 HTML 和 XML，学习曲线比较陡峭，但值得一学，解析速度很快。
+2. HTML Parser Python 内建的解析器，非常方便。
 
 
 dark Internet
