@@ -64,7 +64,7 @@ footer li{
   margin-left: 20px;
 }
 nav li{
-    margin-top: 30px;
+    margin-top: 20px;
     float: right;
     clear: both;
 }
@@ -89,8 +89,8 @@ p {
     text-align: center;
 }
 
-#posts li{
-  margin-top: 25px;
+#posts ul li{
+  margin-top: 30px;
   margin-left: 30px;
 }
 
