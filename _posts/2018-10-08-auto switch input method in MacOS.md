@@ -19,15 +19,15 @@ GhostSKB 本来很好的解决方案，我也为此支付了一笔。但是，�
 最终代码如下，请自行安装 issw。
 
 {% highlight python %}
-# ! /usr/bin/env python
+#! /usr/bin/env python
 # coding: utf-8
 
-	'
+'''
 auto switch input method between different applications
 
 if you want to change the app list, modify the var 'en_list' and 'zh_list',
 or add your own custom_list.
-	'
+'''
 
 from __future__ import unicode_literals
 from __future__ import division
@@ -43,54 +43,53 @@ from PyObjCTools import AppHelper
 # or use command: osascript -e 'id of app "Safari"'
 
 en_list = [
-]()"com.googlecode.iterm2",
-"com.google.Chrome",
-"com.apple.Terminal",
-"com.sublimetext.3",
-"com.apple.Safari",
-"com.sequelpro.SequelPro",
+    "com.googlecode.iterm2",
+    "com.google.Chrome",
+    "com.apple.Terminal",
+    "com.sublimetext.3",
+    "com.apple.Safari",
+    "com.sequelpro.SequelPro",
 ]
 
 
 zh_list = [
-]()"com.tencent.xinWeChat",
-"com.tencent.WeWorkMac",
-"com.workflowy.desktop",
-"com.apple.Notes",
+    "com.tencent.xinWeChat",
+    "com.tencent.WeWorkMac",
+    "com.workflowy.desktop",
+    "com.apple.Notes",
 ]
 
 
 def get_avaliable_input_methods():
 
-return check_output(["issw", '-l']()).decode().strip().split('\n')
+    return check_output(["issw", '-l']).decode().strip().split('\n')
 
 
 class Observer(NSObject):
-def handle_(self, noti):
-info = noti.userInfo().objectForKey_(NSWorkspaceApplicationKey)
-bundleIdentifier = info.bundleIdentifier()
-if bundleIdentifier in en_list:
-print("found: [%s]() active, switch to US" % bundleIdentifier)
-call(["issw", "com.apple.keylayout.US"]())
-elif bundleIdentifier in zh_list:
-print("found: [%s]() active, switch to Shuangpin" % bundleIdentifier)
-call(["issw", "com.apple.inputmethod.SCIM.Shuangpin"]())
+    def handle_(self, noti):
+        info = noti.userInfo().objectForKey_(NSWorkspaceApplicationKey)
+        bundleIdentifier = info.bundleIdentifier()
+        if bundleIdentifier in en_list:
+            print("found: [%s] active, switch to US" % bundleIdentifier)
+            call(["issw", "com.apple.keylayout.US"])
+        elif bundleIdentifier in zh_list:
+            print("found: [%s] active, switch to Shuangpin" % bundleIdentifier)
+            call(["issw", "com.apple.inputmethod.SCIM.Shuangpin"])
 
 
 def main():
-nc = NSWorkspace.sharedWorkspace().notificationCenter()
-observer = Observer.new()
-nc.addObserver_selector_name_object_(
-observer,
-"handle:",
-NSWorkspaceDidActivateApplicationNotification,
-None
-)
-AppHelper.runConsoleEventLoop(installInterrupt=True)
+    nc = NSWorkspace.sharedWorkspace().notificationCenter()
+    observer = Observer.new()
+    nc.addObserver_selector_name_object_(
+        observer,
+        "handle:",
+        NSWorkspaceDidActivateApplicationNotification,
+        None
+    )
+    AppHelper.runConsoleEventLoop(installInterrupt=True)
 
 
 if __name__ == '__main__':
-main()
+    main()
 
 {% endhighlight %}
-
