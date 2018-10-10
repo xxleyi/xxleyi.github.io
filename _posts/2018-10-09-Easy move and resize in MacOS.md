@@ -10,7 +10,7 @@
 
 但是，我自此以后，对此功能便念念不忘。总觉得有人已经实现了这个功能，只是自己还没有发现。
 
-终于，在多次失败的搜索查询之后，以**mac linux mouse move window anywhere**作为关键字，成功搜索到最佳解决方案：
+终于，在多次失败的搜索查询之后，以 **mac linux mouse move window anywhere** 作为关键字，成功搜索到最佳解决方案：
 
 [easy-move-resize: https://github.com/dmarcotte/easy-move-resize](https://github.com/dmarcotte/easy-move-resize)
 
