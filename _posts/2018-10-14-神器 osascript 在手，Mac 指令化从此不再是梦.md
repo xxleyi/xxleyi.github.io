@@ -23,7 +23,7 @@ tell application "HandShaker" to activate
 tell application "System Events"
   tell process "HandShaker"
       click menu item "New Text Idea Pill" of menu "File" of menu bar 1
-      click
+      delay 1
       tell application "System Events" to keystroke "v" using command down
   end tell
 end tell
