@@ -1,8 +1,8 @@
 ---
-'title': '终于找到从 enriron 中读取 post body 的方法'
+'title': '终于找到从 environ 中读取 post body 的方法'
 'date': 2018-10-15
 ---
-# 终于找到从 enriron 中读取 post body 的方法
+# 终于找到从 environ 中读取 post body 的方法
 
 百般搜索之下，终于找到从 Django request\_started 信号中得到 post 请求体的方法。
 
