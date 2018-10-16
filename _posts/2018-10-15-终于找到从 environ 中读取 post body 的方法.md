@@ -21,8 +21,9 @@ body = r.body.decode()
 
 {% endhighlight %}
 
-补充：
 ----
+
+补充：
 新方式，不需要外部包，但可能过于粗暴
 
 {% highlight python %}
@@ -31,5 +32,5 @@ import io
 if 'wsgi.input' in e:
     with io.StringIO(e['wsgi.input']) as f:
         print(f.read(), flush=True)
-        
+
 {% endhighlight %}
