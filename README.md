@@ -1,6 +1,6 @@
-# wenxiheshang.github.io
+# xxleyi.github.io
 
-个人非常简单的博客站。
+个人博客站。
 
 记录自己的零碎技术笔记，偶尔有些小随感。
 
