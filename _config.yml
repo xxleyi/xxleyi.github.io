@@ -24,3 +24,7 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+
+url: "https://xxleyigithub.io" # the base hostname & protocol for your site
+plugins:
+  - jekyll-sitemap
