@@ -10,7 +10,6 @@
 
 {% highlight python %}
 from pythonjsonlogger import jsonlogger
-# 日志依赖于settings 生效,放到最后面
 LOGGING = {
 # 此处省略一些东西
 	'handlers': {
