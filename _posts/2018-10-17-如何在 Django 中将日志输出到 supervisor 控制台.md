@@ -9,7 +9,7 @@
 关键点在于，本质上控制台是 sys.stdout。把握住这一点，将日志以 stream 流的方式打一份，就可以实现不依赖 supervisor 配置本身，在 supervisor 中看到日志输出信息。
 
 {% highlight python %}
-from pythonjsonlogger import jsonlogger
+import sys
 LOGGING = {
 # 此处省略一些东西
 	'handlers': {
