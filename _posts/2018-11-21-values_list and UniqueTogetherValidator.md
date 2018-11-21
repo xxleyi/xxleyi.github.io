@@ -1,6 +1,6 @@
 ---
 'title': 'values_list and UniqueTogetherValidator'
-'date': 2018-11-16
+'date': 2018-11-21
 ---
 # values\_list and UniqueTogetherValidator
 
