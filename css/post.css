@@ -146,3 +146,9 @@ code{
   font-size: 1.2rem;
   line-height: 0.5rem;
 }
+
+img {
+    max-width: 95%;
+    max-height: 100vh;
+    margin: auto;
+}
