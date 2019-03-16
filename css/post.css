@@ -38,16 +38,16 @@ html{
 body {
     max-width: 1100px;
     margin:auto;
-    background-color: #e0e0eb;
+    background-color: #f2f1f6;
     font-family: -apple-system, BlinkMacSystemFont, "PingFang SC","Helvetica Neue", STHeiti, Helvetica, Tahoma, Arial, "Microsoft Yahei", sans-serif;
 }
 
 main {
   font-size: 1.4rem;
   line-height: 1.8;
-  background-color: white;
-  box-shadow: 0 1rem 1rem rgba(255,255,255,.25);
-  color: #4d4d4d;
+  background-color: #f2f1f6;
+  box-shadow: 0 1rem 1rem #7a8a9a;
+  color: #2a3a4a;
   margin-bottom: 0rem;
   padding: 4rem 2rem;
 }
@@ -71,7 +71,7 @@ nav li{
 
 a {
     text-decoration: none;
-    color: #33cc33;
+    color: #4ba946;
 }
 a:hover {
     text-decoration: none;
