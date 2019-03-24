@@ -1,8 +1,8 @@
 ---
-'title': 'Instructions: Language of the Computer'
+'title': 'Instructions：Language of the Computer'
 'date': 2019-03-24
 ---
-# Instructions: Language of the Computer
+# Instructions：Language of the Computer
 
 计算机真正的语言是**指令。**指令面向的是 CPU 以及其背后的一整套硬件架构。接受起来也很容易，计算机在不通电时仅仅只是一堆硬件，通电之后的计算机之所以开始运转不息，是因为自通电的那一刻起，这一堆计算机硬件就开始接受源源不断的**指令**。所有这些指令，计算机硬件在通电之后均可以直接听懂其准确含义，然后精准执行硬件层面上的动作。
 
