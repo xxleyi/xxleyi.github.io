@@ -1,5 +1,5 @@
 ---
-'title': 'UnboundLocalError: local variable 'X' referenced before assignment'
+'title': 'UnboundLocalError local variable 'X' referenced before assignment'
 'date': 2019-06-18
 ---
 # UnboundLocalError: local variable 'X' referenced before assignment
