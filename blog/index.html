@@ -6,7 +6,7 @@ title: 西了意的个人小站 -- 记录日常
 	<ul id="posts">
 	  {% for post in site.posts %}
 	    <li>
-	      <div class="post-date">{{ post.date | date: "%Y 年 %m 月 %d 日" }}</div>
+	      <div class="post-date">{{ post.date | date: "%B %d, %Y" }}</div>
 	      <a href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
 	    </li>
 	  {% endfor %}

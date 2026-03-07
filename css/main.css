@@ -26,7 +26,7 @@ body {
   max-width: 1000px;
   margin-left: auto;
   margin-right: auto;
-  background: linear-gradient(135deg, #f5f7fa 0%, #ffffff 100%);
+  background: #ffffff;
   font-size: 16px;
   font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.6;
@@ -42,21 +42,30 @@ body {
 
 /* ========== Navigation ========== */
 nav {
-  background-color: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  border-bottom: 2px solid #007bff;
-  padding: 1.5rem 2rem;
-  box-shadow: var(--shadow-sm);
+  background-color: #ffffff;
+  border-bottom: 1px solid #e0e6ed;
+  padding: 2rem;
+  box-shadow: none;
   position: relative;
   width: 100%;
 }
 
 nav h1 {
-  text-align: center;
-  font-size: 2rem;
-  color: #007bff;
-  margin: 0 0 1rem 0;
+  text-align: left;
+  font-size: 1.8rem;
+  color: #1a1a1a;
+  margin: 0 0 1.5rem 0;
   font-weight: 700;
+}
+
+nav h1 a {
+  color: #1a1a1a;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav h1 a:hover {
+  color: #007bff;
 }
 
 nav ul, footer ul {
@@ -67,7 +76,7 @@ nav ul, footer ul {
   color: #666;
   display: flex;
   gap: 2rem;
-  justify-content: center;
+  justify-content: flex-start;
   flex-wrap: wrap;
   margin: 0;
 }
@@ -76,7 +85,33 @@ nav li {
   margin: 0;
   float: none;
   clear: none;
-  font-size: 1rem;
+  font-size: 0.95rem;
+}
+
+nav a {
+  color: #666;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+nav a:hover {
+  color: #007bff;
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #007bff;
+  transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+  width: 100%;
 }
 
 /* ========== Aside ========== */
@@ -92,11 +127,11 @@ aside h3 {
 /* ========== Main Content ========== */
 main {
   max-width: 1100px;
-  margin: 2rem auto;
-  background-color: #ffffff;
+  margin: 0 auto;
+  background-color: transparent;
   margin-bottom: 3rem;
   padding: 3rem 2.5rem;
-  border-radius: 8px;
+  border-radius: 0;
   flex-grow: 1;
 }
 
@@ -125,7 +160,6 @@ h2 {
   color: #2c3e50;
   margin: 2rem 0 1rem 0;
   font-weight: 600;
-  border-bottom: 3px solid #007bff;
   padding-bottom: 0.75rem;
 }
 
@@ -158,6 +192,14 @@ a:hover {
   text-decoration: none;
   color: #0056b3;
   border-bottom: 1px solid #0056b3;
+}
+
+nav a {
+  border-bottom: none;
+}
+
+nav a:hover {
+  border-bottom: none;
 }
 
 /* ========== Footer ========== */
@@ -194,16 +236,46 @@ footer a:hover {
 
 .hero {
   text-align: center;
-  margin: 3rem 0;
-  padding: 2rem 0;
+  margin: 2rem 0 3rem 0;
+  padding: 1rem 0;
 }
 
 .hero h2 {
-  font-size: 1.8rem;
-  color: #34495e;
-  margin: 1rem 0;
+  font-size: 1.4rem;
+  color: #666;
+  margin: 0.5rem 0;
   font-weight: 400;
-  line-height: 1.4;
+  line-height: 1.6;
+  letter-spacing: 0.3px;
+  position: relative;
+  display: block;
+}
+
+.hero h2 span {
+  display: inline-block;
+  position: relative;
+}
+
+.hero h2 span::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #666;
+  border-radius: 1px;
+}
+
+.hero h2 span::before {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #666;
+  border-radius: 0.5px;
 }
 
 .cta {
@@ -270,6 +342,10 @@ footer a:hover {
   nav ul {
     gap: 1.5rem;
   }
+  
+  nav {
+    padding: 1.5rem;
+  }
 }
 
 /* ========== Mobile (< 768px) ========== */
@@ -279,7 +355,7 @@ footer a:hover {
   }
 
   body {
-    background: #f5f7fa;
+    background: #ffffff;
     max-width: 100%;
   }
 
@@ -288,21 +364,26 @@ footer a:hover {
   }
 
   nav {
-    padding: 1rem 1rem;
-    border-bottom: 2px solid #007bff;
+    padding: 1.2rem;
+    border-bottom: 1px solid #e0e6ed;
   }
 
   nav h1 {
-    font-size: 1.5rem;
-    margin-bottom: 0.75rem;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
   }
 
   nav ul {
-    gap: 1rem;
-    justify-content: center;
+    gap: 1.2rem;
+    justify-content: flex-start;
+    flex-wrap: wrap;
   }
 
   nav li {
+    font-size: 0.9rem;
+  }
+  
+  nav a {
     font-size: 0.9rem;
   }
 
@@ -362,20 +443,24 @@ footer a:hover {
   }
 
   nav {
-    padding: 0.75rem;
+    padding: 1rem;
   }
 
   nav h1 {
-    font-size: 1.3rem;
-    margin-bottom: 0.5rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.75rem;
   }
 
   nav ul {
-    gap: 0.5rem;
+    gap: 1rem;
   }
 
   nav li {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+  }
+  
+  nav a {
+    font-size: 0.85rem;
   }
 
   main {
