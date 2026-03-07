@@ -91,7 +91,8 @@ aside h3 {
 
 /* ========== Main Content ========== */
 main {
-  max-width: 900px;
+  max-width: 1100px;
+  min-width: 900px;
   margin: 2rem auto;
   background-color: #ffffff;
   margin-bottom: 3rem;
@@ -280,6 +281,7 @@ footer a:hover {
 
   body {
     background: #f5f7fa;
+    max-width: 100%;
   }
 
   .flex-container {
@@ -306,10 +308,10 @@ footer a:hover {
   }
 
   main {
-    max-width: calc(100% - 2rem);
-    margin: 1rem auto;
+    max-width: 100%;
+    margin: 0;
     padding: 1.5rem 1rem;
-    border-radius: 6px;
+    border-radius: 0;
   }
 
   h1 {
@@ -378,7 +380,7 @@ footer a:hover {
   }
 
   main {
-    margin: 0.75rem auto;
+    margin: 0;
     padding: 1rem;
   }
 
