@@ -119,6 +119,4 @@ Codex 最终成功完成了这个任务。这不是简单的"AI 能做什么"的
 - [Online Playground](https://dt.rt.ht/)
 - [CI 工件（支持 WASI 目标）](https://github.com/Master-Hash/difftastic/releases/tag/untagged-53ae0e2c3c8a50b33462)
 
-## 撰写声明
-
-此文主要由 AI 编写，我负责提供故事来源，想法和思路。
+> 注：本文主要由 AI 编写，人类负责提供故事来源，想法和思路。
