@@ -1,5 +1,8 @@
 html{
   font-size: 1rem;
+  /* disable overscroll so mobile browsers (Safari) won't trigger pull-to-refresh */
+  overscroll-behavior: none;
+  touch-action: none;
 }
 
 header {
@@ -69,6 +72,8 @@ header #newgame:hover{
   font-weight: bold;
   font-size: 3.5em;
   overflow: hidden;
+  /* allow directional sliding by adjusting top/left relative offsets */
+  position: relative;
 }
 
 .dialog-fail{

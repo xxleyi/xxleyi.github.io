@@ -87,18 +87,57 @@ function generateOneNumber(){
 
 function showNumberWithAnimation(randomX, randomY) {
   var theNumberCell = $("#grid-cell-"+randomX+"-"+randomY);
+
+  // reset to normal size and zero offsets before applying the starting offset
+  theNumberCell.css({
+    marginLeft: "0.5rem",
+    marginRight: "0.5rem",
+    top: "0",
+    left: "0",
+    opacity: "1",
+    width: "5rem",
+    height: "5rem"
+  });
+
+  // starting offset / opacity based on the last move direction
+  switch(direction) {
+    case 0: // swipe left → new tile comes from right
+      theNumberCell.css({
+        opacity: '0.4',
+        left: "4.5rem"
+      });
+      break;
+    case 1: // swipe right → from left
+      theNumberCell.css({
+        opacity: '0.4',
+        left: "-4.5rem"
+      });
+      break;
+    case 2: // swipe up → from bottom
+      theNumberCell.css({
+        opacity: '0.4',
+        top: "4.5rem"
+      });
+      break;
+    case 3: // swipe down → from top
+      theNumberCell.css({
+        opacity: '0.4',
+        top: "-4.5rem"
+      });
+      break;
+    default:
+      theNumberCell.css({
+        opacity: '0.4',
+        left: "4.5rem"
+      });
+  }
+
+  // animate back to normal placement without resizing the cell
   theNumberCell.animate({
-    opacity:'0.4',
-    width:"1.5rem",
-    marginLeft:"0rem",
-    marginRight:"4.5rem"
-  },100);
-  theNumberCell.animate({
-    opacity:'1',
-    width:"5rem",
-    marginLeft:"0.5rem",
-    marginRight:"0.5rem"
-  },200);
+    opacity: '1',
+    top: "0",
+    left: "0"
+  }, 200);
 }
 
 function stopAnimation(randomx, randomy) {
@@ -107,6 +146,22 @@ function stopAnimation(randomx, randomy) {
 }
 
 $(document).keydown(function (event) {
+  // record the intended direction so that the subsequent tile animation matches
+  switch(event.keyCode) {
+    case 37: // left
+      direction = 0;
+      break;
+    case 39: // right
+      direction = 1;
+      break;
+    case 38: // up
+      direction = 2;
+      break;
+    case 40: // down
+      direction = 3;
+      break;
+  }
+
   stopAnimation(randomX, randomY);
   move();
   find2048();
