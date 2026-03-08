@@ -88,6 +88,56 @@ nav li {
   font-size: 0.95rem;
 }
 
+.dropdown {
+  position: relative;
+}
+
+.dropdown-toggle {
+  cursor: pointer;
+  white-space: nowrap;
+  display: inline-flex;
+  align-items: center;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  border: 1px solid #e0e6ed;
+  border-radius: 4px;
+  box-shadow: var(--shadow-sm);
+  padding: 0.3rem 0;
+  min-width: 120px;
+  z-index: 1000;
+  margin-top: 0.2rem;
+}
+
+.dropdown:hover .dropdown-menu,
+.dropdown:focus-within .dropdown-menu {
+  display: block;
+}
+
+.dropdown-menu li {
+  margin: 0;
+  padding: 0;
+}
+
+.dropdown-menu a {
+  display: block;
+  padding: 0rem 1rem;
+  color: #666;
+  text-decoration: none;
+  font-size: 0.9rem;
+  white-space: nowrap;
+}
+
+.dropdown-menu a:hover {
+  color: #007bff;
+  background-color: #f8f9fa;
+}
+
 nav a {
   color: #666;
   text-decoration: none;
