@@ -127,7 +127,8 @@ aside h3 {
 /* ========== Main Content ========== */
 main {
   max-width: 1100px;
-  margin: 0 auto;
+  margin-left: 0;
+  margin-right: auto;
   background-color: transparent;
   margin-bottom: 3rem;
   padding: 3rem 2.5rem;
