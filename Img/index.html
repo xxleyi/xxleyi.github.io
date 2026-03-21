@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Img - Base64 图片可视化工具</title>
+  <link rel="stylesheet" href="img.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>🖼️ Img - 图片可视化工具</h1>
+      <p>支持 Base64 编码字符串和图片 URL 的可视化预览</p>
+    </header>
+
+    <main>
+      <div class="input-section">
+        <h2>输入图片 URL 或 Base64 字符串</h2>
+        <textarea id="base64Input" placeholder="请粘贴图片 URL 或 Base64 字符串&#10;例如: https://example.com/image.png&#10;或者: data:image/png;base64,iVBORw0KGgo...&#10;或者直接粘贴没有前缀的 Base64 字符串" rows="5"></textarea>
+        <div class="button-group">
+          <button id="visualizeBtn" onclick="visualizeImage()">📸 可视化</button>
+          <button id="clearBtn" onclick="clearAll()">🗑️ 清空</button>
+        </div>
+      </div>
+
+      <div id="result" style="display: none;" class="result-section">
+        <h2>预览结果</h2>
+        <div id="imageContainer" class="image-container">
+          <img id="previewImage" alt="预览图片">
+        </div>
+        <div class="info-section">
+          <div class="info-item">
+            <span class="label">输入类型:</span>
+            <span id="inputType">-</span>
+          </div>
+          <div class="info-item">
+            <span class="label">图片尺寸:</span>
+            <span id="imageDimensions">-</span>
+          </div>
+          <div class="info-item">
+            <span class="label">输入长度:</span>
+            <span id="base64Length">-</span>
+          </div>
+          <div class="info-item">
+            <span class="label">图片格式:</span>
+            <span id="imageFormat">-</span>
+          </div>
+        </div>
+        <div class="button-group">
+          <button onclick="downloadImage()">⬇️ 下载图片</button>
+          <button onclick="openFullScreen()">🔍 全屏查看</button>
+        </div>
+      </div>
+      <div id="fullscreenOverlay" class="fullscreen-overlay" style="display: none;" onclick="closeFullScreen()">
+        <span class="close-btn" onclick="event.stopPropagation(); closeFullScreen();">✕</span>
+        <img id="fullscreenImage" alt="全屏预览图片">
+      </div>
+
+      <div id="error" style="display: none;" class="error-section">
+        <p id="errorMessage"></p>
+      </div>
+    </main>
+
+    <footer>
+      <p>基于 Base64 编码的图片可视化工具 | 支持所有主流图片格式</p>
+    </footer>
+  </div>
+
+  <script src="img.js"></script>
+</body>
+</html>
