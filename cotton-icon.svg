@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="100%" height="100%" role="img" aria-label="Cute Cotton Icon">
+    <defs>
+        <!-- 柔和的现代UI阴影，增加图标质感 -->
+        <filter id="icon-shadow" x="-20%" y="-20%" width="140%" height="140%">
+            <feDropShadow dx="0" dy="4" stdDeviation="5" flood-color="#002244" flood-opacity="0.12" />
+        </filter>
+    </defs>
+
+    <g filter="url(#icon-shadow)">
+        <!-- 1. 底部托叶 (棕色底座) -->
+        <g stroke="#4A3525" stroke-width="6" stroke-linejoin="round" fill="#D2996E">
+            <path d="M 30,80 L 18,95 L 45,85 L 60,110 L 75,85 L 102,95 L 90,80 Z" />
+        </g>
+        
+        <!-- 2. 核心棉花的外轮廓图层 (实心深色底，利用线宽做统一外描边) -->
+        <g stroke="#4A3525" stroke-width="6" fill="#4A3525">
+            <!-- 左下 -->
+            <circle cx="42" cy="79" r="20" />
+            <!-- 右下 -->
+            <circle cx="78" cy="79" r="20" />
+            <!-- 左侧 -->
+            <circle cx="34" cy="57" r="22" />
+            <!-- 右侧 -->
+            <circle cx="86" cy="57" r="22" />
+            <!-- 顶部 -->
+            <circle cx="60" cy="37" r="28" />
+            <!-- 正中 -->
+            <circle cx="60" cy="65" r="24" />
+        </g>
+
+        <!-- 3. 核心棉花的纯白填充图层 (正好盖住底层的内部杂线) -->
+        <g fill="#FFFFFF">
+            <circle cx="42" cy="79" r="20" />
+            <circle cx="78" cy="79" r="20" />
+            <circle cx="34" cy="57" r="22" />
+            <circle cx="86" cy="57" r="22" />
+            <circle cx="60" cy="37" r="28" />
+            <circle cx="60" cy="65" r="24" />
+        </g>
+
+        <!-- 4. 内部柔软质感纹理 (淡蓝色) -->
+        <g fill="none" stroke="#D4E8FC" stroke-width="3.5" stroke-linecap="round">
+            <!-- 左上凹槽延长线 -->
+            <path d="M 43,45 Q 50,55 55,50" />
+            <!-- 右上凹槽延长线 -->
+            <path d="M 77,45 Q 70,55 65,50" />
+            <!-- 左下凹槽延长线 -->
+            <path d="M 36,67 Q 45,67 48,75" />
+            <!-- 右下凹槽延长线 -->
+            <path d="M 84,67 Q 75,67 72,75" />
+        </g>
+
+        <!-- 5. 可爱表情特征 (眼睛、腮红、微笑) -->
+        <g>
+            <!-- 眼睛 -->
+            <circle cx="50" cy="65" r="4" fill="#4A3525" />
+            <circle cx="70" cy="65" r="4" fill="#4A3525" />
+            
+            <!-- 腮红 -->
+            <circle cx="39" cy="70" r="4.5" fill="#FF9EAD" opacity="0.85" />
+            <circle cx="81" cy="70" r="4.5" fill="#FF9EAD" opacity="0.85" />
+            
+            <!-- 嘴巴 -->
+            <path d="M 55,69 Q 60,75 65,69" fill="none" stroke="#4A3525" stroke-width="3" stroke-linecap="round" />
+        </g>
+    </g>
+</svg>
